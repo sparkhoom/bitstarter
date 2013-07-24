@@ -4,9 +4,9 @@ var app = express();
 app.use(express.logger());
 
 app.get('/', function(request, response) {
-  fs.readfile('index.html', function (err, data){
+  fs.readFile('index.html', function (err, data){
     if (err) throw err;
-    response.send('Hello World!2');
+    response.send(data);
   });
 });
 
